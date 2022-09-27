@@ -1,0 +1,87 @@
+\begin{frame}\frametitle{Acci/'on}
+    \begin{block}{Acción}
+        Una acción de un grupo $G$ en un conjunto $S$ es una función 
+        $\cdot : G \times S \to S$, $(g, s) \mapsto g \cdot s $  tal que
+        \begin{itemize}
+            \item[$i)$] $(gh)\cdot s = g \cdot (h \cdot s); \forall g, h \in G$ y $\forall s \in S$.
+            \item[$ii)$] $e \cdot s = s; \forall s \in S$, donde $e$ es el \textbf{elemento identidad} de $G$.
+        \end{itemize}
+    \end{block}
+\begin{AgdaAlign}
+\begin{code}%
+\>[0]\AgdaKeyword{record}\AgdaSpace{}%
+\AgdaRecord{IsAction}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{F}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaRecord{Func}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{G.setoid}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{×ₛ}}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+%
+\>[6]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ₐ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaField{Carrier}\AgdaSpace{}%
+\AgdaBound{G}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaField{Carrier}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaField{Carrier}\AgdaSpace{}%
+\AgdaBound{A}\<%
+\\
+%
+\>[6]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ₐ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaBound{g}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaField{Func.f}\AgdaSpace{}%
+\AgdaBound{F}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{g}\AgdaSpace{}%
+\AgdaOperator{\AgdaInductiveConstructor{,}}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSymbol{)}\<%
+\\
+%
+\>[6]\AgdaKeyword{field}\<%
+\\
+\>[6][@{}l@{\AgdaIndent{0}}]%
+\>[8]\AgdaField{idₐ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{∀}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₐ}}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≈A}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\>[8]\AgdaField{compₐ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{∀}\AgdaSpace{}%
+\AgdaBound{g'}\AgdaSpace{}%
+\AgdaBound{g}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{g'}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₐ}}\AgdaSpace{}%
+\AgdaBound{g}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₐ}}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≈A}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{g'}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{g}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₐ}}\AgdaSpace{}%
+\AgdaBound{x}
+
+\end{code}
+\end{AgdaAlign}
+\end{frame}

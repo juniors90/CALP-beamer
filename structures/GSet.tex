@@ -1,0 +1,42 @@
+\begin{frame}\frametitle{GSet}
+    \begin{block}{$G$-Set}
+        Un conjunto $S$ en el cual un grupo $G$ tiene una acci\'on se llama $G$-set.
+    \end{block}
+\begin{AgdaAlign}
+\begin{code}%
+\>[0]\AgdaKeyword{record}\AgdaSpace{}%
+\AgdaRecord{GSet}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}}}
+\AgdaKeyword{where}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[5]\AgdaKeyword{field}\<%
+\\
+\>[5][@{}l@{\AgdaIndent{0}}]%
+\>[7]\AgdaField{set}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaRecord{Setoid}\AgdaSpace{}%
+\AgdaBound{ℓ₁}\AgdaSpace{}%
+\AgdaBound{ℓ₂}\<%
+\\
+%
+\>[7]\AgdaField{action}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaRecord{Func}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{G.setoid}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{×ₛ}}\AgdaSpace{}%
+\AgdaField{set}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaField{set}\<%
+\\
+%
+\>[7]\AgdaField{isAction}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaRecord{IsAction}\AgdaSpace{}%
+\AgdaField{action}
+
+\end{code}
+\end{AgdaAlign}
+\end{frame}

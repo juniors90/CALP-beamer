@@ -1,0 +1,15 @@
+\begin{frame}
+    \frametitle{Semigrupo, Monoide y Grupo}
+        Dado un conjunto $G$, $G\not = \emptyset$, una operación binaria
+        es una función $$\ast : G \times G \to G.$$
+    
+        Un semigrupo es $G$ un conjunto, $G\not = \emptyset$ junto con una operación 
+        binaria $\ast : G \times G \to G$ que es \textbf{asociativa}. Es decir,
+        $$(a \ast b) \ast c = a \ast (b \ast c); \forall a, b, c \in G.$$
+    
+        Un monoide es un semigrupo $G$ un conjunto, si existe un \textbf{elemento identidad}
+        (a ambos lados) $e \in G$ tal que $$\forall a \in G | a \ast e = e \ast a = a.$$
+    
+        Un grupo es un monoide $G$, tal que todo elemento posee \textbf{inverso} vía $\ast$.
+        Es decir, $$\forall a \in G : \exists a^{-1} \in G | a \ast a^{-1} = a^{-1} \ast a = e.$$
+\end{frame}

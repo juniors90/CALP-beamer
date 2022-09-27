@@ -1,0 +1,72 @@
+    \begin{frame}
+	\frametitle{Representaciones, acciones lineales y m\'odulos}
+	Sea $V$ un espacio vectorial sobre el cuerpo $\mathbb{F}$ y $G$ un grupo.
+	\begin{block}{Acción Lineal}
+		Una acción de un grupo $G$ en un espacio vectorial $V$ es una función 
+		$\cdot : G \times V \to V$, $(g, v) \mapsto g \cdot v $  tal que
+		\begin{itemize}
+			\item[$i)$] $(gh)\cdot v = g \cdot (h \cdot v); \forall g, h \in G$ y $\forall v \in V$.
+			\item[$ii)$] $e \cdot v = v; \forall v \in V$, donde $e$ es el \textbf{elemento identidad} de $G$.
+			\item[$iii)$] $g \cdot (u+v) = g \cdot u + g \cdot v; \forall g \in G$ y $u,v \in V$.
+			\item[$iv)$] $g \cdot (\lambda v) = \lambda(g \cdot v); \forall  g \in G, v \in V$ y $\forall \lambda \in F$.
+		\end{itemize}
+	\end{block}
+	\textbf{Observación 1}. Notar que para definir una acción de $G$ en $S$ 
+	los items $iii)$ y $iv)$ no son requeridos en un conjunto.
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Representaciones, acciones lineales y m\'odulos}
+	Luego, una representaci\'on de un grupo en un espacio vecotriales equivalente a una acci\'on del
+	grupo en el espacio vectorial.
+	\begin{block}{$G$-m\'odulo}
+		Un espacio vectorial $V$ en el cual un grupo $G$ tiene una acci\'on lineal se llama $G$-m\'odulo.
+	\end{block}
+    \begin{block}{$G$-subm\'odulo}
+    	Un subm\'odulo de un $G$-m\'odulo $V$ es un subespacio vectorial $U$ de $V$ tal que
+    	$g \cdot u \in U$ para todo $g \in G$ y $u \in U$.
+    \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Representaciones, acciones lineales y m\'odulos}
+        
+        \begin{block}{Representaci\'on por Permutac\'on}
+            Una representaci\'on por permutac\'on de un grupo $G$ en un conjunto $S$ un
+            momorfismo de $G$ en el conjunto de todas las permutaciones de $S$.
+        \end{block}
+        
+        \begin{block}{Representaci\'on Lineal }
+            Una representaci\'on lineal de un grupo $G$ en un espacio vectorial $V$ es un
+            morfismo de $G$ en el grupo de todas las transformaciones lineales inversibles en $V$.
+        \end{block}
+        
+        A menos que los califiquemos con alg\'un otro adjetivo, representaci\'on significar\'a en este trabajo
+        representaci\'on lineal. Restringiremos nuestra atenci\'on en grupos finitos y espacios vectoriales sobre
+        el cuerpo complejo.
+    \end{frame}
+    
+
+    \begin{frame}
+	\frametitle{Representaciones, acciones lineales y m\'odulos}
+	\begin{theorem}%[An important theorem]
+	    Dada una acci\'on de un grupo $G$ en un espacio vectorial $V$, para cada $g$ en $G$
+	    definimos una funci\'on $\rho g : V \to V$ dada por $(\rho g)v = g \cdot v$ para todo $v \in V$.
+	    Luego $\rho g$ es una transformaci\'on lineal inversible, y la funci\'on $\rho$ definida
+	    por $g \mapsto \rho g$ es un homomorfismo de $G$ en el grupo de todas las transformaciones
+	    lineales invertibles en $V$.
+	    
+	    Rec\'iprocamente, dado un homomorfismo $\rho$ de $G$ en el
+	    grupo de todas las tranformaciones lineales inversibles en $V$, la f\'ormula
+	    $g \cdot v = (\rho g)v$, define una acci\'on de $G$ en $V$.
+	\end{theorem}
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Representaciones, acciones lineales y m\'odulos}
+    \begin{block}{Morfismo de $G$-m\'odulos}
+    	Si $U$ y $V$ son $G$-m\'odulos. Un $G$-homomorfismo de $U$ en $V$ es una transformaci\'on
+    	lineal $f : U \to V$ tal que $$ f(g \cdot u) = g \cdot (fu)$$  para todo $g \in G$ y $u \in U$.
+    \end{block}
+%    De nuevo, podemos hablar de la categoría de $G$-m\'odulo.
+    \end{frame}
